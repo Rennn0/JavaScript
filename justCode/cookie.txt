@@ -1,0 +1,41 @@
+const firstname=document.getElementById('name')
+const surname=document.getElementById('surname')
+const submit=document.getElementById('submit')
+const autofill=document.getElementById('autofill')
+
+submit.addEventListener('click',()=>{
+    setCookie('FirstName',firstname.value,20)
+    setCookie('LastName',surname.value,20)
+})
+
+autofill.addEventListener('click',()=>{
+    firstname.value=getCookie("FirstName")
+    surname.value=getCookie('LastName')
+})
+
+console.log(getCookie('FirstName'))
+console.log(document.cookie)
+
+function setCookie(name,value,expire){
+    const date=new Date();
+    date.setTime(date.getTime()+expire*24*360*1000)
+    let expires='expires='+date.toUTCString()
+    document.cookie=`${name}=${value}; ${expire};path=/ `
+}
+
+function deleteCookie(name){
+    setCookie(name,null,null)
+}
+
+function getCookie(name){
+    const cDecoded=decodeURIComponent(document.cookie)
+    const cArray=cDecoded.split('; ')
+    let result=null
+    cArray.forEach(e=>{
+        if(e.indexOf(name)==0)
+            {
+                result=e.substring(name.length+1)
+            }
+    })
+    return result
+}

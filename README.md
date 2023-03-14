@@ -1,5 +1,4 @@
-Games under construction
-
+Development : ongoing
 
 https://rennn0.github.io/JavaScript/Timer/index.html _ Timner
 

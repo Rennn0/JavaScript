@@ -1,6 +1,6 @@
 Development : ongoing
 
-https://rennn0.github.io/JavaScript/Timer/index.html _ Timner
+https://rennn0.github.io/JavaScript/Timer/index.html _ Timer
 
 https://rennn0.github.io/JavaScript/Snake/index.html _ Snake
 

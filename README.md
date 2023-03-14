@@ -1,6 +1,8 @@
-https://rennn0.github.io/JavaScript/Timer/index.html _ Timner
+Development : ongoing
 
-https://rennn0.github.io/JavaScript/Snake/snake.html _ Snake
+https://rennn0.github.io/JavaScript/Timer/index.html _ Timer
+
+https://rennn0.github.io/JavaScript/Snake/index.html _ Snake
 
 https://rennn0.github.io/JavaScript/TicTacToe/TTT.html _ TicTacToe
 

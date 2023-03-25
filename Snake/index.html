@@ -8,7 +8,19 @@
 </head>
 <body>
     <form action="./snake.html">
-        <button>Enter game</button>
-    </form>
+        <input type="text" placeholder="username" id="user">
+        <button id="enter">Enter game</button>
+    </form>    
 </body>
+<script >
+    const user =document.getElementById('user');
+    const enter=document.getElementById('enter');
+        enter.addEventListener('click',()=>{
+        document.cookie=`username:${user.value}`
+        let cookie=decodeURIComponent(document.cookie)
+        console.log(cookie)
+        user.value=""
+} )
+
+</script>
 </html>

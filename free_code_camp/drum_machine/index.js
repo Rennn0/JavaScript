@@ -55,8 +55,8 @@ function App(){
         setActive(selector)
     }
     React.useEffect(()=>{
-        document.addEventListener('keydown',event=>{
-            sound(event.key.toUpperCase())
+        document.addEventListener('keydown',e=>{
+            sound(e.key.toUpperCase())
         })
     })
     return(

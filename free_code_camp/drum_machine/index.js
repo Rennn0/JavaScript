@@ -61,7 +61,7 @@ function App(){
     })
     return(
         <div id='drum-machine'>
-            <div id='display'>{active}</div>
+            <div id='display' className='m-4'>{active}</div>
             <div className='drum-pads'>
                 {arr.map(e=>
                 <div className='drum-pad text-center' key={e.src} id={e.src} onClick={()=>sound(e.text)}>

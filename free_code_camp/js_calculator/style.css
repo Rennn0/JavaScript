@@ -16,3 +16,19 @@
 #upper{
     color: rgb(255, 255, 0);
 }
+@media only screen and (max-height:500px){
+    #cg{
+        height: 400px;
+        width: 300px;
+    }
+    #upper{
+        font-size: 15px;
+        margin: 0;
+    }
+    #lower{
+        font-size: 20px;
+    }
+    #ctn{
+        margin-bottom: 5px;
+    }
+}

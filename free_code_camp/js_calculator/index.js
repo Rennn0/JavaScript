@@ -12,8 +12,8 @@ myElement.addEventListener("mouseup", (event) => {
 
     return(
         <div id='board' className='fixed inset-0 bg-[#c2c2d6] flex items-center justify-center'>
-            <div className='w-[500px] h-[600px] bg-black'>
-                <div className='h-[10%] pt-[6px]'>
+            <div className='w-[350px] h-[500px] bg-black'>
+                <div className='h-[10%] pt-[2px]'>
                     <div className='w-[95%] h-[15px] text-xl mb-[3px] text-white text-right' id='upper'></div>
                     <div className='w-[95%] h-[30px] text-3xl text-white text-right' id='lower'>0</div>
                 </div>

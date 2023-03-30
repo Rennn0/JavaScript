@@ -1,16 +1,29 @@
-function App(){
+const myElement=document.getElementById('root')
+myElement.addEventListener("mousedown", (event) => {
+    event.preventDefault();
+    myElement.focus();
+  });
+  
+myElement.addEventListener("mouseup", (event) => {
+    event.preventDefault();
+  });
+  
+  function App(){
+
     return(
         <div id='board' className='fixed inset-0 bg-[#c2c2d6] flex items-center justify-center'>
-            <div className='w-[400px] h-[500px] bg-black border-2 border-white'>
-                <div className='w-[95%] h-[3%] text-white m-auto'>zzzz</div>
-                <div className='w-[95%] h-[7%] text-white m-auto'>ZZZZZZZZZZ</div>
-                <div className='w-[95%] h-[90%] text-center text-3xl m-auto'>
+            <div className='w-[500px] h-[600px] bg-black'>
+                <div className='h-[10%] pt-[6px]'>
+                    <div className='w-[95%] h-[15px] text-xl mb-[3px] text-white text-right' id='upper'></div>
+                    <div className='w-[95%] h-[30px] text-3xl text-white text-right' id='lower'>0</div>
+                </div>
+                <div className='w-[95%] h-[88%] text-center text-3xl m-auto' id='main'>
                     {
                         Buttons.map(btn=>(
                             <div className={btn.div}>
                                 {
                                     btn.children.map(child=>(
-                                        <div className={child.class}>{child.text}</div>
+                                        <div className={child.class} onClick={child.func} id={child.id}>{child.text}</div>
                                     ))
                                 }
                             </div>

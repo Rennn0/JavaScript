@@ -31,8 +31,9 @@ const Buttons=[
                 class:`text-white w-[25%] h-[100%] items-center justify-center text-center flex hover:text-black hover:border-[1px]` ,
                 id:'gayofa',
                 func:()=>{
-                    if(Data.lValue)Data.operation='/'
-                    switched=true
+                    if(Data.lValue)
+                    {Data.operation='/'
+                    switched=true}
                     update();
                 }
             },
@@ -41,8 +42,8 @@ const Buttons=[
                 class:`text-white w-[25%] h-[100%] items-center justify-center text-center flex hover:text-black hover:border-[1px]` ,
                 id:'gamravleba',
                 func:()=>{
-                    if(Data.lValue)Data.operation='x'
-                    switched=true
+                    if(Data.lValue){Data.operation='x'
+                    switched=true}
                     update();
                 }
             }
@@ -83,8 +84,8 @@ const Buttons=[
                 class:`text-white w-[25%] h-[100%] items-center justify-center text-center flex hover:text-black hover:border-[1px]` ,   
                 id:'gamokleba',
                 func:()=>{
-                    if(Data.lValue)Data.operation='-'
-                    switched=true
+                    if(Data.lValue){Data.operation='-'
+                    switched=true}
                     update();
                 }
             }
@@ -125,8 +126,8 @@ const Buttons=[
                 class: `text-white w-[25%] h-[100%] items-center justify-center text-center flex hover:text-black hover:border-[1px]`,   
                 id:'mimateba',
                 func:()=>{
-                    if(Data.lValue) Data.operation='+'
-                    switched=true
+                    if(Data.lValue){Data.operation='+'
+                    switched=true}
                     update();
                 }
             }

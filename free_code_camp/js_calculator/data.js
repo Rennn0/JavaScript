@@ -31,7 +31,7 @@ const Buttons=[
                 class:`text-white w-[25%] h-[100%] items-center justify-center text-center flex hover:text-black hover:border-[1px]` ,
                 id:'gayofa',
                 func:()=>{
-                    Data.operation='/'
+                    if(Data.lValue)Data.operation='/'
                     switched=true
                     update();
                 }
@@ -41,7 +41,7 @@ const Buttons=[
                 class:`text-white w-[25%] h-[100%] items-center justify-center text-center flex hover:text-black hover:border-[1px]` ,
                 id:'gamravleba',
                 func:()=>{
-                    Data.operation='x'
+                    if(Data.lValue)Data.operation='x'
                     switched=true
                     update();
                 }
@@ -83,7 +83,7 @@ const Buttons=[
                 class:`text-white w-[25%] h-[100%] items-center justify-center text-center flex hover:text-black hover:border-[1px]` ,   
                 id:'gamokleba',
                 func:()=>{
-                    Data.operation='-'
+                    if(Data.lValue)Data.operation='-'
                     switched=true
                     update();
                 }
@@ -125,7 +125,7 @@ const Buttons=[
                 class: `text-white w-[25%] h-[100%] items-center justify-center text-center flex hover:text-black hover:border-[1px]`,   
                 id:'mimateba',
                 func:()=>{
-                    Data.operation='+'
+                    if(Data.lValue) Data.operation='+'
                     switched=true
                     update();
                 }
@@ -167,25 +167,30 @@ const Buttons=[
                 class: `text-white w-[25%] h-[200%] items-center justify-center text-center flex hover:text-black hover:border-[1px]`,   
                 id:'toloba',
                 func:()=>{
-                    let answer=0
-                    switch(Data.operation){
-                        case 'x':
-                            answer=Number(Data.lValue)*Number(Data.rValue);
-                            break;
-                        case '/':
-                            answer=Number(Data.lValue)/Number(Data.rValue);
-                            break;
-                        case '+':
-                            answer=Number(Data.lValue)+Number(Data.rValue);
-                            break;
-                        case '-':
-                            answer=Number(Data.lValue)-Number(Data.rValue);
-                            break;  
-                        }
-                    document.getElementById('upper').innerHTML=Data.sent+'='+answer;
-                    document.getElementById('lower').innerHTML=answer
-                    Data.sent=Data.lValue=Data.rValue=Data.operation=''
-                    switched=false
+                    if(Data.lValue){
+                        let answer=0
+                        switch(Data.operation){
+                            case 'x':
+                                Data.rValue!==''?answer=Number(Data.lValue)*Number(Data.rValue):answer=Number(Data.lValue);
+                                break;
+                            case '/':
+                                Data.rValue!==''?answer=Number(Data.lValue)/Number(Data.rValue):answer=Number(Data.lValue);
+                                break;
+                            case '+':
+                                Data.rValue!==''?answer=Number(Data.lValue)+Number(Data.rValue):answer=Number(Data.lValue);
+                                break;
+                            case '-':
+                                Data.rValue!==''?answer=Number(Data.lValue)-Number(Data.rValue):answer=Number(Data.lValue);
+                                break;  
+                            default:
+                                answer=Number(Data.lValue)
+                            }
+                        if(answer.toString().length>6)answer=answer.toFixed(6)
+                        document.getElementById('upper').innerHTML=Data.sent+'='+answer;
+                        document.getElementById('lower').innerHTML=answer
+                        Data.sent=Data.lValue=Data.rValue=Data.operation=''
+                        switched=false
+                    }
                 }
             }
         ]

@@ -15,3 +15,5 @@ https://rennn0.github.io/JavaScript/free_code_camp/drum_machine/index.html _ Dru
 https://rennn0.github.io/JavaScript/free_code_camp/markdown_preview/index.html _ Markdown Preview
 
 https://rennn0.github.io/JavaScript/free_code_camp/js_calculator/index.html _ Calculator
+
+https://rennn0.github.io/JavaScript/free_code_camp/clock/index.html _ Clock

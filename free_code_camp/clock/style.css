@@ -1,0 +1,45 @@
+@media (max-width:400px) or (max-height:400px) {
+    #root{
+        width: 360px;
+        height: 250px;
+    }
+    #time-left,#timer-text,#break-text,#session-text{
+        font-size: 20px;
+        margin-bottom: auto;
+    }
+    .fa-arrow-up,.fa-arrow-down,.arrow{
+        font-size: 15px;
+    }
+    #buttons{
+        gap: 25px;
+        font-size: 20px;
+    }
+    #break-session{
+        margin-bottom: 10px;
+    }
+}
+.arrow {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .arrow:hover {
+    background-color: #eeeeee3b;
+  }
+  
+  .fa-arrow-up.fa-arrow-down {
+    font-size: 24px;
+  }
+  .btns{
+    transition: background-color 0.2s ease-in-out;
+  }
+  .btns:hover{
+    color: rgb(86, 98, 16);
+  }

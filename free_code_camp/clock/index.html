@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weird Clock</title>
+</head>
+<body class="h-screen flex items-center text-center font-mono justify-center bg-slate-800">
+    <div id="root" class="w-[700px] h-[500px] bg-gray-400 rounded-md">
+        <div  class="w-[100%] h-[15%] text-4xl font-serif pt-[10px]" >25 + 5 Clock</div>
+        <div id="break-session" class="flex w-[100%] h-[20%] text-2xl ">
+            <div id="break-label" class="w-[50%] h-[100%] ">
+                <div id="break-text" class="w-[100%] h-[50%] ">Break Length</div>
+                <div class="w-[100%] h-[50%] flex ">
+                    <div class="w-[33.3%] h-[100%] " >
+                        <button id="break-decrement" class="arrow"><i class="fas fa-arrow-up"></i></button>
+                    </div>
+                    <div class="w-[33.3%] h-[100%] " id="break-length">5</div>
+                    <div class="w-[33.3%] h-[100%] " >
+                        <button id="break-increment" class="arrow"><i class="fas fa-arrow-down"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="session-label" class="w-[50%] h-[100%] ">
+                <div id="session-text" class="w-[100%] h-[50%] ">Session Length</div>
+                <div class="w-[100%] h-[50%]  flex ">
+                    <div  class="w-[33.3%] h-[100%] ">
+                        <button id="session-decrement" class="arrow"><i class="fas fa-arrow-up"></i></button>
+                    </div>
+                    <div id="session-length" class="w-[33.3%] h-[100%] ">25</div>
+                    <div  class="w-[33.3%] h-[100%] ">
+                        <button id="session-increment" class="arrow"><i class="fas fa-arrow-down"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+            <div id="timer-label" class="w-[70%] m-auto h-[40%] rounded-full border-[5px] border-cyan-800">
+                <div id="timer-text" class="text-4xl m-[20px]">Session</div>
+                <div id="time-left" class="text-8xl">25:00</div>
+            </div>
+            <div id="buttons" class="w-[40%] h-[25%] m-auto flex text-2xl gap-[45px]">
+                <button id="start_stop" class="w-[33.33%]  h-[100%] btns"><i class="fa fa-play"> Start</i></button>
+                <button id="reset" class="w-[33.33%] h-[100%] btns"><i class="fa fa-pause"> Pause</i></button>
+                <button id="reset" class="w-[33.34%] h-[100%] btns"><i class="fa fa-sync-alt"> Reset</i></button>
+                <audio src="" id="beep"></audio>
+            </div>
+        
+        <div></div>
+    </div>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script type="text/javascript" src="./index.js"></script>
+</html>

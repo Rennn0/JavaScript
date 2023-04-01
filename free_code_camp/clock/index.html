@@ -17,11 +17,11 @@
                 <div id="break-text" class="w-[100%] h-[50%] ">Break Length</div>
                 <div class="w-[100%] h-[50%] flex ">
                     <div class="w-[33.3%] h-[100%] " >
-                        <button id="break-decrement" class="arrow"><i class="fas fa-arrow-up"></i></button>
+                        <button id="break-increment" class="arrow"><i class="fas fa-arrow-up"></i></button>
                     </div>
-                    <div class="w-[33.3%] h-[100%] " id="break-length">5</div>
+                    <div class="w-[33.3%] h-[100%] " id="break-length"></div>
                     <div class="w-[33.3%] h-[100%] " >
-                        <button id="break-increment" class="arrow"><i class="fas fa-arrow-down"></i></button>
+                        <button id="break-decrement" class="arrow"><i class="fas fa-arrow-down"></i></button>
                     </div>
                 </div>
             </div>
@@ -29,24 +29,24 @@
                 <div id="session-text" class="w-[100%] h-[50%] ">Session Length</div>
                 <div class="w-[100%] h-[50%]  flex ">
                     <div  class="w-[33.3%] h-[100%] ">
-                        <button id="session-decrement" class="arrow"><i class="fas fa-arrow-up"></i></button>
+                        <button id="session-increment" class="arrow"><i class="fas fa-arrow-up"></i></button>
                     </div>
-                    <div id="session-length" class="w-[33.3%] h-[100%] ">25</div>
+                    <div id="session-length" class="w-[33.3%] h-[100%] "></div>
                     <div  class="w-[33.3%] h-[100%] ">
-                        <button id="session-increment" class="arrow"><i class="fas fa-arrow-down"></i></button>
+                        <button id="session-decrement" class="arrow"><i class="fas fa-arrow-down"></i></button>
                     </div>
                 </div>
             </div>
         </div>    
             <div id="timer-label" class="w-[70%] m-auto h-[40%] rounded-full border-[5px] border-cyan-800">
                 <div id="timer-text" class="text-4xl m-[20px]">Session</div>
-                <div id="time-left" class="text-8xl">25:00</div>
+                <div id="time-left" class="text-8xl"></div>
             </div>
             <div id="buttons" class="w-[40%] h-[25%] m-auto flex text-2xl gap-[45px]">
                 <button id="start_stop" class="w-[33.33%]  h-[100%] btns"><i class="fa fa-play"> Start</i></button>
-                <button id="reset" class="w-[33.33%] h-[100%] btns"><i class="fa fa-pause"> Pause</i></button>
+                <button id="pause" class="w-[33.33%] h-[100%] btns"><i class="fa fa-pause"> Pause</i></button>
                 <button id="reset" class="w-[33.34%] h-[100%] btns"><i class="fa fa-sync-alt"> Reset</i></button>
-                <audio src="" id="beep"></audio>
+                <audio src="./beep.mp3" id="beep"></audio>
             </div>
         
         <div></div>

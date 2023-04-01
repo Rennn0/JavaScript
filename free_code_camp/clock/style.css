@@ -41,5 +41,5 @@
     transition: background-color 0.2s ease-in-out;
   }
   .btns:hover{
-    color: rgb(86, 98, 16);
+    color: rgba(11, 11, 11, 0.491);
   }

@@ -29,8 +29,8 @@ function update_break(){
 }
 break_increment.addEventListener('click',()=>{if(break_time<60)break_time++;update_break()})
 session_increment.addEventListener('click',()=>{if(session_time<60)session_time++;update_session()})
-break_decrement.addEventListener('click',()=>{if(break_time>0)break_time--;update_break()})
-session_decrement.addEventListener('click',()=>{if(session_time>0)session_time--;update_session()})
+break_decrement.addEventListener('click',()=>{if(break_time>1)break_time--;update_break()})
+session_decrement.addEventListener('click',()=>{if(session_time>1)session_time--;update_session()})
 
 let timer=null
 let break_timer=null

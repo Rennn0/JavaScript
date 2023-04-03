@@ -13,11 +13,8 @@ const circle_dataset = [
  ];
 const width=400
 const height=200
-const circle_width=500
-const circle_height=300
 
 const svg=d3.select('body').append('svg').attr('width',width).attr('height',height)
-
 svg.selectAll('rect').data(dataset).enter().append('rect').attr("x", (data,index)=>(index*30))
    .attr("y", d=>(height-3*d))
    .attr("width", 25)
@@ -26,7 +23,6 @@ svg.selectAll('rect').data(dataset).enter().append('rect').attr("x", (data,index
    .attr('class','bar')
    .append('title')
    .text(d=>d)
-
 svg.selectAll('text').data(dataset).enter().append('text')
    .attr('x',(d,i)=>(i*30))
    .attr('y',d=>(height-3*d-3))
@@ -34,23 +30,27 @@ svg.selectAll('text').data(dataset).enter().append('text')
    .style('font-size', '25px')
    .style('fill','red')
 
+const circle_width=500
+const circle_height=300
+const padding=30  
 const circle=d3.select('body').append('svg').attr('width',circle_width).attr('height',circle_height)
+const xScale=d3.scaleLinear().domain([0,d3.max(circle_dataset,d=>d[0])]).range([padding,circle_width-padding])
+const yScale=d3.scaleLinear().domain([0,d3.max(circle_dataset,d=>d[1])]).range([circle_height-padding,padding])
 
 circle.selectAll('circle').data(circle_dataset).enter().append('circle')
-.attr('cx',d=>d[0])
-.attr('cy',d=>circle_height-d[1])
+.attr('cx',d=>xScale(d[0]))
+.attr('cy',d=>yScale(d[1]))
 .attr('r',5)
-.style('fill','lightblue')
-.style('stroke','black')
-.style('stroke-width',2)
+circle.selectAll('text').data(circle_dataset).enter().append('text')
+.attr('x',d=>xScale(d[0]+10))
+.attr('y',d=>yScale(d[1]))
+.text(d=>d[0]+';'+d[1])
 
-circle.selectAll('text')
-.data(circle_dataset)
-.enter()
-.append('text')
-.attr('x',d=>d[0]+10)
-.attr('y',d=>circle_height-d[1])
-.text(d=>(`${d[0]}, ${d[1]}`))
-
-const scale=d3.scaleLinear().domain([-100,100]).range([0,1])
-d3.selectAll('div').append('h1').text(scale(11))
+const xAxis = d3.axisBottom(xScale);
+const yAxis = d3.axisLeft(yScale);
+circle.append("g")
+   .attr("transform", "translate(0,270)")
+   .call(xAxis);
+circle.append("g")
+   .attr("transform", "translate(30,0)")
+   .call(yAxis);
